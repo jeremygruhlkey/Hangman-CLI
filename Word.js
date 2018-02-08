@@ -1,13 +1,5 @@
 var Letter = require("./Letter");
 
-// contains a constructor function, Word that takes in a new random word and 
-// calls the Letter object to create an array of new objects representing
-// the individual characters, in the random word
-// also creates a string representing the current status of the word being guessed
-// displaying either it's character or an underscore based on the Letter function
-// and a function that takes a character as an argument and calls the checkGuess function
-// in Letter for each Letter object
-
 function Word(currentWord){
     this.currentWord = currentWord,
     this.wordArray = currentWord.split("")
@@ -39,20 +31,6 @@ function Word(currentWord){
         this.wordDisplayString();
     }
 }
-
-// var currentWord = new Word("badega");
-
-
-// currentWord.buildLetters();
-// console.log(currentWord.letterArray);
-
-// currentWord.letterArray[2].checkGuess(guess);
-
-// currentWord.guessMade(guess);
-
-// console.log(currentWord.letterArray);
-// console.log(currentWord.letterArray[0].shown + " " + currentWord.letterArray[1].shown + " " + currentWord.letterArray[2].shown); 
-
 
 module.exports = {
     Word: Word
