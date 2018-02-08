@@ -45,9 +45,9 @@ function playGame(currentWord) {
         })
     }else {
         if (guessesRemaining > 0) {
-            console.log("YOU GOT IT!! NEXT WORD!")
+            console.log("YOU GOT IT!! NEXT WORD!");
         }else{
-            console.log("HA HA!! YOU LOOSE! TRY AGAIN")
+            console.log("HA HA!! IT WAS " + "'" + currentWord.currentWord + "'" + " YOU LOSE! TRY AGAIN")
         }
         gameStart();
     }

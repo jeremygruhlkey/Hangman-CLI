@@ -28,7 +28,9 @@ function Word(currentWord){
         if (string.indexOf("_") < 0){
             this.complete = true;
         }
+        console.log("");
         console.log(string);
+        console.log("");
     }
     this.guessMade =function(guess){
         for (var i = 0; i< this.letterArray.length; i++) {
