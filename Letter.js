@@ -15,7 +15,7 @@ function Letter(character) {
         } 
     }
     this.checkGuess = function(guess) {
-        if (guess = this.character){
+        if (guess === this.character){
             this.beenGuessed = true;
             this.displayChar();
         }else {
@@ -24,7 +24,7 @@ function Letter(character) {
     }
 }
 
-modules.exports = {
+module.exports = {
     Letter: Letter
 };
 
