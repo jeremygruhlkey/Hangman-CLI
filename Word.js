@@ -12,10 +12,10 @@ function Word(currentWord){
     this.currentWord = currentWord,
     this.wordArray = currentWord.split("")
     this.letterArray = [];
+    this.complete = false;
     this.buildLetters = function(){
         for (var i = 0; i < this.wordArray.length; i++){
             var character = this.wordArray[i];
-            // console.log(character);
             var newLetter = new Letter.Letter(character);
             this.letterArray.push(newLetter)
         }
@@ -24,6 +24,9 @@ function Word(currentWord){
         var string = "";
         for (i = 0; i < this.letterArray.length; i++){
             string = string + this.letterArray[i].shown + " ";
+        }
+        if (string.indexOf("_") < 0){
+            this.complete = true;
         }
         console.log(string);
     }
@@ -36,7 +39,7 @@ function Word(currentWord){
 }
 
 // var currentWord = new Word("badega");
-var guess = "a";
+
 
 // currentWord.buildLetters();
 // console.log(currentWord.letterArray);
