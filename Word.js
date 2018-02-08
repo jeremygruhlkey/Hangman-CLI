@@ -23,7 +23,7 @@ function Word(currentWord){
     this.wordDisplayString = function(){
         var string = "";
         for (i = 0; i < this.letterArray.length; i++){
-            string = string + this.letterArray[i].shown
+            string = string + this.letterArray[i].shown + " ";
         }
         console.log(string);
     }
@@ -35,14 +35,20 @@ function Word(currentWord){
     }
 }
 
-var currentWord = new Word("cat");
-var guess = "t";
+// var currentWord = new Word("badega");
+var guess = "a";
 
-currentWord.buildLetters();
+// currentWord.buildLetters();
 // console.log(currentWord.letterArray);
+
 // currentWord.letterArray[2].checkGuess(guess);
-currentWord.guessMade(guess);
+
+// currentWord.guessMade(guess);
+
 // console.log(currentWord.letterArray);
 // console.log(currentWord.letterArray[0].shown + " " + currentWord.letterArray[1].shown + " " + currentWord.letterArray[2].shown); 
 
 
+module.exports = {
+    Word: Word
+};

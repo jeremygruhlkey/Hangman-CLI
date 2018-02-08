@@ -17,8 +17,10 @@ function Letter(character) {
     this.checkGuess = function(guess) {
         if (guess === this.character){
             this.beenGuessed = true;
+            console.log("CORRECT");
             this.displayChar();
         }else {
+            console.log("INCORRECT");
             this.beenGuessed = false;
         }
     }
